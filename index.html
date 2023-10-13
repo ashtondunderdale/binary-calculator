@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script> <!-- Move the script tag here -->
     <title>MultiBase</title>
 </head>
 <body>
     <div class="menuDiv">
-        <p class="binTxt">- Binary<sub>2</sub></p>
-        <p class="hexTxt">- Hexadecimal<sub>16</sub></p>
-        <p class="octTxt">- Octal<sub>8</sub></p>
-        <p class="decTxt">- Decimal<sub>10</sub></p>
+        <p class="binTxt">Binary<sub style="color: white;">2</sub></p>
+        <p class="hexTxt">Hexadecimal<sub style="color: white;">16</sub></p>
+        <p class="octTxt">Octal<sub style="color: white;">8</sub></p>
+        <p class="decTxt">Decimal<sub style="color: white;">10</sub></p>
     </div>
+
     <div class="calcDiv">
-        <p>
-            <input class="numberOne" type="text" id="binOne" placeholder="">
-            <input class="numberTwo" type="text" id="binTwo" placeholder="">
+        <input class="numberOne" type="text" id="binOne" placeholder="">
+        <input class="numberTwo" type="text" id="binTwo" placeholder="">
         
-            <button class="resultButton" id="resultButton">Result</button>
+        <input class="outputBox" type="text" id="binResult" placeholder="">
     </div>
+    <button class="resultButton" id="calculateButton">Result</button>
+    <button class="resetButton" id="resetButton">Reset</button>
 </body>
 </html>
