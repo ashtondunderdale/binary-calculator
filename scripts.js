@@ -1,12 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("calculateButton").addEventListener("click", calculateAndDisplayResult);
-    document.getElementById("resetButton").addEventListener("click", resetFields); // Add event listener for the Reset button
-
+    document.getElementById("resetButton").addEventListener("click", resetFields);
+    
     function calculateAndDisplayResult() {
         var num1 = document.getElementById("binOne").value;
         var num2 = document.getElementById("binTwo").value;
+        var operation = document.getElementById("baseSelect").value; 
+        
+        var result;
 
-        var result = addBinaryNumbers(num1, num2);
+        if (operation === "Addition") {
+            result = addBinaryNumbers(num1, num2);
+        } else if (operation === "Subtraction") {
+            result = subtractBinaryNumbers(num1, num2);
+        } else if (operation === "Multiplication") {
+            result = multiplyBinaryNumbers(num1, num2);
+        }
 
         document.getElementById("binResult").value = result;
     }
@@ -14,10 +23,22 @@ document.addEventListener("DOMContentLoaded", function () {
     function addBinaryNumbers(binary1, binary2) {
         var int1 = parseInt(binary1, 2);
         var int2 = parseInt(binary2, 2);
-
         var sum = int1 + int2;
-
         return sum.toString(2);
+    }
+    
+    function subtractBinaryNumbers(binary1, binary2) {
+        var int1 = parseInt(binary1, 2);
+        var int2 = parseInt(binary2, 2);
+        var difference = int1 - int2;
+        return difference.toString(2);
+    }
+    
+    function multiplyBinaryNumbers(binary1, binary2) {
+        var int1 = parseInt(binary1, 2);
+        var int2 = parseInt(binary2, 2);
+        var product = int1 * int2;
+        return product.toString(2);
     }
 
     function resetFields() {

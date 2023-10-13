@@ -92,6 +92,7 @@
     color: black; 
     border: none;
     font-family: monospace;
+    font-size: 12px;
     width: 100px;
     height: 24px;
     transition: transform 0.3s, color 0.3s, background-color 0.3s; 
@@ -120,6 +121,7 @@
     width: 70px;
     height: 24px;
     transition: transform 0.3s, color 0.3s, background-color 0.3s; 
+    font-size: 12px;
 }
 
 .resetButton:hover {
@@ -138,10 +140,13 @@
 .opSelect {
     position: relative;
     top: -125px;
-    left: 290px;
+    left: 270px;
     background-color: rgb(255, 255, 255);
     border: none;
     outline: none;
+    font-family: monospace;
+    width: 120px;
+    font-size: 12px;
 }
 
 .opSelect option:checked {
@@ -149,9 +154,7 @@
     color: white;
 }
 
-.opSelect:hover {
-    background-color: #f0f0f0;
+.opSelect option:hover {
+    background-color: rgb(117, 117, 117); 
+    color: white; 
 }
-
-
-
