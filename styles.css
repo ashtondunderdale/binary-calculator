@@ -139,4 +139,19 @@
     position: relative;
     top: -125px;
     left: 290px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
 }
+
+.opSelect option:checked {
+    background-color: rgb(117, 117, 117);
+    color: white;
+}
+
+.opSelect:hover {
+    background-color: #f0f0f0;
+}
+
+
+
