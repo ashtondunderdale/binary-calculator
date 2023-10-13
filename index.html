@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script> <!-- Move the script tag here -->
+    <script src="scripts.js"></script>
     <title>MultiBase</title>
 </head>
 <body>
-    <div class="menuDiv">
-        <p class="binTxt">Binary<sub style="color: white;">2</sub></p>
-        <p class="hexTxt">Hexadecimal<sub style="color: white;">16</sub></p>
-        <p class="octTxt">Octal<sub style="color: white;">8</sub></p>
-        <p class="decTxt">Decimal<sub style="color: white;">10</sub></p>
+    <div class="binCalTxtDiv">
+        <p class="binCalTxt"> <b>Binary<sub>2</sub> Calculator</b></p>        
     </div>
-
     <div class="calcDiv">
         <input class="numberOne" type="text" id="binOne" placeholder="">
         <input class="numberTwo" type="text" id="binTwo" placeholder="">
         
         <input class="outputBox" type="text" id="binResult" placeholder="">
+
         <div class="customSelect">
             <select class="opSelect" id="baseSelect">
                 <option value="Addition">Addition</option>
@@ -28,6 +25,8 @@
             </select>
         </div>
     </div>
+    <button class="darkModeButton" id="darkModeButton">Dark Mode</button>
+
     <button class="resultButton" id="calculateButton">Result</button>
     <button class="resetButton" id="resetButton">Reset</button>
 </body>

@@ -1,56 +1,28 @@
-.menuDiv{
-    background-color: rgb(235, 235, 235);
-    border: 1px black solid;
-    margin: 5px;
-    height: 240px;
-    width: 220px;
-    position: absolute;
+body{
+    background-color: rgb(249, 246, 246);
 }
 
 .calcDiv {
-    background-color: rgb(235, 235, 235);
+    background-color: var(--bg-calcDiv-background-white);
     height: 140px;
     width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: background-color 0.3s;
 }
 
-.binTxt{
+.dark-mode .calcDiv {
+    background-color: var(--bg-calcDiv-background-dark); 
+}
+
+.binCalTxt {
+    position: absolute; 
     font-family: monospace;
-    font-size: 22px;
-    padding-left: 30px;
-    margin-top: 10px;
-}
-
-.hexTxt{
-    font-family: monospace;
-    font-size: 22px;
-    padding-left: 30px;
-    padding-top: 10px;
-}
-
-.octTxt{
-    font-family: monospace;
-    font-size: 22px;
-    padding-left: 30px;
-    padding-top: 10px;
-}
-
-.decTxt{
-    font-family: monospace;
-    font-size: 22px;
-    padding-left: 30px;
-    padding-top: 10px;
-}
-
-.binTxt, .hexTxt, .octTxt, .decTxt {
-    transition: transform 0.3s;
-  }
-
-.binTxt:hover, .hexTxt:hover, .octTxt:hover, .decTxt:hover{
-    transform: scale(1.1)
+    font-size: 20px;
+    top: 305px; 
+    left: 550px; 
 }
 
 .numberOne {
@@ -75,7 +47,7 @@
 }
 
 .outputBox{
-    width: 142px;
+    width: 248px;
     height: 25px;
     font-size: 28px;
     margin-left: 75px;
@@ -107,7 +79,25 @@
 .resultButton:active {
     background-color: rgb(117, 117, 117);
     transition: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+
+}
+
+.dark-mode .resultButton {
+    background-color: var(--bg-calcDiv-background-dark); 
+    color: white;
+}
+
+.dark-mode .resultButton:hover {
+    background-color: rgb(150, 150, 150);
+    color: white;
+    transform: scale(1.05);
+}
+
+.dark-mode .resultButton:active {
+    background-color: rgb(117, 117, 117);
+    transition: none;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 
 }
 
@@ -137,6 +127,24 @@
 
 }
 
+.dark-mode .resetButton {
+    background-color: var(--bg-calcDiv-background-dark); 
+    color: white;
+}
+
+.dark-mode .resetButton:hover {
+    background-color: rgb(150, 150, 150);
+    color: white;
+    transform: scale(1.05);
+}
+
+.dark-mode .resetButton:active {
+    background-color: rgb(117, 117, 117);
+    transition: none;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+
 .opSelect {
     position: relative;
     top: -125px;
@@ -157,4 +165,70 @@
 .opSelect option:hover {
     background-color: rgb(117, 117, 117); 
     color: white; 
+}
+
+:root {
+    --bg-color-light: rgb(249, 246, 246);
+    --bg-color-dark: rgb(50, 50, 50);
+
+    --bg-calcDiv-background-dark: rgb(69, 69, 69);
+    --bg-calcDiv-background-white: rgb(235, 235, 235);
+
+    --text-color-light: black;
+    --text-color-dark: white;
+}
+
+body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.darkModeButton{
+    position: absolute;
+    top: 810px; 
+    left: 10px; 
+    font-size: 12px;
+    background-color: rgb(235, 235, 235);
+    color: black; 
+    border: none;
+    font-family: monospace;
+    width: 100px;
+    height: 24px;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s; 
+}
+
+.darkModeButton:hover {
+    background-color: rgb(150, 150, 150);
+    color: white;
+    transform: scale(1.05);
+}
+
+.darkModeButton:active {
+    background-color: rgb(117, 117, 117);
+    transition: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.dark-mode .darkModeButton {
+    background-color: var(--bg-calcDiv-background-dark); 
+    color: white;
+}
+
+.dark-mode .darkModeButton:hover {
+    background-color: rgb(150, 150, 150);
+    color: white;
+    transform: scale(1.05);
+}
+
+.dark-mode .darkModeButton:active {
+    background-color: rgb(117, 117, 117);
+    transition: none;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
