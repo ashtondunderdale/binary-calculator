@@ -3,28 +3,36 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("resetButton").addEventListener("click", resetFields);
     document.getElementById("darkModeButton").addEventListener("click", toggleDarkMode);
 
-    // Initialize dark mode status
     var isDarkMode = false;
 
-    // Check for dark mode on page load and update button text
     updateDarkModeButtonText();
 
     function calculateAndDisplayResult() {
         var num1 = document.getElementById("binOne").value;
         var num2 = document.getElementById("binTwo").value;
-        var operation = document.getElementById("baseSelect").value;
         var outputBox = document.getElementById("binResult");
 
-        // Check if the checkbox is checked
         var checkbox = document.getElementById("myCheckbox");
         var isConversionMode = checkbox.checked;
 
+        if (num1 == "" || num2 == "" && isConversionMode) {
+            outputBox.value = "Error";
+        }
+
         if (isConversionMode) {
-            // Convert the binary input to a decimal number
-            var decimalResult = parseInt(num1, 2);
-            outputBox.value = decimalResult;
+            if (num1.match(/^[01]+$/)) {
+                var decimalResult = parseInt(num1, 2);
+                outputBox.value = decimalResult;
+            } else if (/^[0-9]+$/.test(num2)) {
+                var decimalValue = parseInt(num2, 10);
+                var binaryResult = decimalValue.toString(2);
+                outputBox.value = binaryResult;
+            } else {
+                outputBox.value = "NaN";
+            }
+
         } else {
-            // Perform the selected binary operation
+            var operation = document.getElementById("baseSelect").value;
             var result;
 
             if (operation === "Addition") {
@@ -33,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 result = subtractBinaryNumbers(num1, num2);
             } else if (operation === "Multiplication") {
                 result = multiplyBinaryNumbers(num1, num2);
+            } else {
+                result = "Select an operation";
             }
 
             outputBox.value = result;
@@ -68,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleDarkMode() {
         document.body.classList.toggle("dark-mode");
-        isDarkMode = !isDarkMode; 
-        updateDarkModeButtonText(); 
+        isDarkMode = !isDarkMode;
+        updateDarkModeButtonText();
     }
 
     function updateDarkModeButtonText() {

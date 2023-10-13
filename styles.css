@@ -47,9 +47,9 @@ body {
     width: 125px; 
     height: 25px;
     font-size: 28px;
-    margin-left: 75px;
+    margin-left: 15px;
     margin-bottom: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
     font-family: monospace;
     border: none;
 }
@@ -58,21 +58,27 @@ body {
     width: 125px;
     height: 25px;
     font-size: 28px;
-    margin-left: 75px;
+    margin-left: 15px;
     margin-bottom: 10px;
     font-family: monospace;
     border: none;
+    top: 50px;
+    left: 0px;
+    position: absolute;
 }
 
 .outputBox{
-    width: 248px;
+    width: 373px;
     height: 25px;
-    font-size: 28px;
-    margin-left: 75px;
+    font-size: 25px;
+    margin-left: 13px;
     margin-bottom: 10px;
     margin-top: 10px;
     font-family: monospace;
     border: none; 
+    position: absolute;
+    top: 90px;
+    left: 0px;
 }
 
 .resultButton {
@@ -169,7 +175,7 @@ body {
 
 .opSelect {
     position: relative;
-    top: -121px;
+    top: -34px;
     left: 265px;
     background-color: rgb(255, 255, 255);
     border: none;
@@ -257,14 +263,30 @@ body {
 }
 
 .checkbox{
-    top: 45px;
+    top: 40px;
     left: 368px;
     position: absolute;
 }
 
 .checkBoxLbl{
-    top: 45px;
-    left: 267px;
+    top: 40px;
+    left: 265px;
     position: absolute; 
     font-family: monospace;
+}
+
+.biLbl{
+    position: absolute;
+    font-family: monospace;
+    top: 2px;
+    left: 150px;
+    display: none;
+}
+
+.DeLbl{
+    position: absolute;
+    font-family: monospace;
+    top: 42px;
+    left: 150px;
+    display: none;
 }
