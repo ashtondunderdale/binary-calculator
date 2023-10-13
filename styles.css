@@ -1,11 +1,26 @@
-body{
-    background-color: rgb(249, 246, 246);
+body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black 1px solid;
 }
 
 .calcDiv {
     background-color: var(--bg-calcDiv-background-white);
-    height: 140px;
     width: 400px;
+    height: 140px;
+    max-width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -18,11 +33,14 @@ body{
 }
 
 .binCalTxt {
-    position: absolute; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     font-family: monospace;
     font-size: 20px;
-    top: 295px; 
-    left: 550px; 
+    margin-top: -85px;
+    margin-left: -100px;
 }
 
 .numberOne {
@@ -58,22 +76,25 @@ body{
 }
 
 .resultButton {
-    margin-left: 540px;
-    margin-top: 500px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     background-color: rgb(235, 235, 235);
-    color: black; 
+    color: black;
     border: none;
     font-family: monospace;
-    font-size: 12px;
     width: 100px;
     height: 24px;
-    transition: transform 0.3s, color 0.3s, background-color 0.3s; 
+    font-size: 12px;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+    margin-top: 100px;
+    margin-left: -150px;
 }
 
 .resultButton:hover {
     background-color: rgb(150, 150, 150);
     color: white;
-    transform: scale(1.05);
 }
 
 .resultButton:active {
@@ -91,7 +112,6 @@ body{
 .dark-mode .resultButton:hover {
     background-color: rgb(150, 150, 150);
     color: white;
-    transform: scale(1.05);
 }
 
 .dark-mode .resultButton:active {
@@ -102,22 +122,25 @@ body{
 }
 
 .resetButton {
-    margin-left: 227px;
-    margin-top: 500px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     background-color: rgb(235, 235, 235);
-    color: black; 
+    color: black;
     border: none;
     font-family: monospace;
     width: 70px;
     height: 24px;
-    transition: transform 0.3s, color 0.3s, background-color 0.3s; 
     font-size: 12px;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+    margin-top: 100px;
+    margin-left: 165px;
 }
 
 .resetButton:hover {
     background-color: rgb(150, 150, 150);
     color: white;
-    transform: scale(1.05);
 }
 
 .resetButton:active {
@@ -135,7 +158,6 @@ body{
 .dark-mode .resetButton:hover {
     background-color: rgb(150, 150, 150);
     color: white;
-    transform: scale(1.05);
 }
 
 .dark-mode .resetButton:active {
@@ -190,18 +212,18 @@ body {
     color: var(--text-color-dark);
 }
 
-.darkModeButton{
-    position: absolute;
-    top: 810px; 
+.darkModeButton {
+    position: fixed; 
+    bottom: 10px;
     left: 10px; 
     font-size: 12px;
     background-color: rgb(235, 235, 235);
-    color: black; 
+    color: black;
     border: none;
     font-family: monospace;
     width: 100px;
     height: 24px;
-    transition: transform 0.3s, color 0.3s, background-color 0.3s; 
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
 }
 
 .darkModeButton:hover {
