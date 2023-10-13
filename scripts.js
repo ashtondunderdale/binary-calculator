@@ -13,18 +13,30 @@ document.addEventListener("DOMContentLoaded", function () {
         var num1 = document.getElementById("binOne").value;
         var num2 = document.getElementById("binTwo").value;
         var operation = document.getElementById("baseSelect").value;
+        var outputBox = document.getElementById("binResult");
 
-        var result;
+        // Check if the checkbox is checked
+        var checkbox = document.getElementById("myCheckbox");
+        var isConversionMode = checkbox.checked;
 
-        if (operation === "Addition") {
-            result = addBinaryNumbers(num1, num2);
-        } else if (operation === "Subtraction") {
-            result = subtractBinaryNumbers(num1, num2);
-        } else if (operation === "Multiplication") {
-            result = multiplyBinaryNumbers(num1, num2);
+        if (isConversionMode) {
+            // Convert the binary input to a decimal number
+            var decimalResult = parseInt(num1, 2);
+            outputBox.value = decimalResult;
+        } else {
+            // Perform the selected binary operation
+            var result;
+
+            if (operation === "Addition") {
+                result = addBinaryNumbers(num1, num2);
+            } else if (operation === "Subtraction") {
+                result = subtractBinaryNumbers(num1, num2);
+            } else if (operation === "Multiplication") {
+                result = multiplyBinaryNumbers(num1, num2);
+            }
+
+            outputBox.value = result;
         }
-
-        document.getElementById("binResult").value = result;
     }
 
     function addBinaryNumbers(binary1, binary2) {

@@ -233,3 +233,16 @@ body {
     transition: none;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
+
+.checkbox{
+    top: 45px;
+    left: 368px;
+    position: absolute;
+}
+
+.checkBoxLbl{
+    top: 45px;
+    left: 267px;
+    position: absolute; 
+    font-family: monospace;
+}
