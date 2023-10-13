@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var biLabel = document.querySelector(".biLbl");
     var deLabel = document.querySelector(".DeLbl");
 
-    // Add an event listener to the checkbox
     checkbox.addEventListener("change", function () {
-        // If the checkbox is checked, show the labels; otherwise, hide them
         biLabel.style.display = checkbox.checked ? "inline" : "none";
         deLabel.style.display = checkbox.checked ? "inline" : "none";
     });
@@ -13,22 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
     var isDarkMode = false;
     var darkModeButton = document.getElementById("darkModeButton");
 
-    // Function to update the text content of the dark mode button
     function updateDarkModeButtonText() {
         darkModeButton.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
     }
 
-    // Function to toggle dark mode
     function toggleDarkMode() {
         document.body.classList.toggle("dark-mode");
         isDarkMode = !isDarkMode;
         updateDarkModeButtonText();
     }
 
-    // Event listener for the dark mode button
     darkModeButton.addEventListener("click", toggleDarkMode);
 
-    // Function to calculate and display the result
     function calculateAndDisplayResult() {
         var num1 = document.getElementById("binOne").value;
         var num2 = document.getElementById("binTwo").value;
@@ -36,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var outputBox = document.getElementById("binResult");
 
         if (num1 == "" && num2 == "") {
-            outputBox.value = "Error: invalid input";
+            outputBox.value = "Input Required";
         } else if (checkbox.checked) {
             if (num1.match(/^[01]+$/)) {
                 var decimalResult = parseInt(num1, 2);
@@ -65,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Function to add binary numbers
     function addBinaryNumbers(binary1, binary2) {
         var int1 = parseInt(binary1, 2);
         var int2 = parseInt(binary2, 2);
@@ -73,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return sum.toString(2);
     }
 
-    // Function to subtract binary numbers
     function subtractBinaryNumbers(binary1, binary2) {
         var int1 = parseInt(binary1, 2);
         var int2 = parseInt(binary2, 2);
@@ -81,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return difference.toString(2);
     }
 
-    // Function to multiply binary numbers
     function multiplyBinaryNumbers(binary1, binary2) {
         var int1 = parseInt(binary1, 2);
         var int2 = parseInt(binary2, 2);
@@ -89,14 +80,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return product.toString(2);
     }
 
-    // Function to reset input fields
     function resetFields() {
         document.getElementById("binOne").value = "";
         document.getElementById("binTwo").value = "";
         document.getElementById("binResult").value = "";
     }
 
-    // Event listeners for buttons
     document.getElementById("calculateButton").addEventListener("click", calculateAndDisplayResult);
     document.getElementById("resetButton").addEventListener("click", resetFields);
 });
