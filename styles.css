@@ -21,7 +21,7 @@ body{
     position: absolute; 
     font-family: monospace;
     font-size: 20px;
-    top: 305px; 
+    top: 295px; 
     left: 550px; 
 }
 
@@ -147,14 +147,15 @@ body{
 
 .opSelect {
     position: relative;
-    top: -125px;
-    left: 270px;
+    top: -121px;
+    left: 265px;
     background-color: rgb(255, 255, 255);
     border: none;
     outline: none;
     font-family: monospace;
     width: 120px;
     font-size: 12px;
+    height: 20px;
 }
 
 .opSelect option:checked {
