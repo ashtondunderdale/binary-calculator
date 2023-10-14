@@ -27,7 +27,7 @@ html, body {
 .mainDiv {
     padding: 20px;
     width: 700px;
-    height: 1200px;
+    height: 1250px;
     align-items: center;
     background-color: var(--bg-mainDiv-background-white);
 }

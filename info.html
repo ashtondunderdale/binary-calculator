@@ -12,26 +12,54 @@
         <a href="index.html" class="homeButton">Home</a>
         <div class="mainDiv">
             <h1 class="userGuideTitle">Binary<sub>2</sub> Info</h1> <hr>
-            <p class="userGuideTxt">Binary is a number system used in computers and digital electronics. It is fundamentally different 
+            <p class="userGuideTxt"><b>Intro:</b><br><br> Binary is a number system used in computers and digital electronics. It is fundamentally different 
                 from the decimal system that we use in everyday life, which is based on 10 digits (0-9). In contrast, binary uses only 
                 two digits: 0 and 1. This might seem limited, but it's perfect for representing information in digital devices because 
                 they operate with two basic states: on (1) and off (0). Let's start with the basics of binary representation:
                 <br><br><br>
-                1. Binary Digits (Bits): <br><br>
+                <b>1. Binary Digits (Bits):</b><br><br>
                 In binary, each digit is called a "bit". As mentioned earlier, a bit can only have two values, 0 or 1. It's the smallest 
                 unit of information in the binary system.
-                <br><br>
-                2. Binary Numbers: <br><br>
+                <br><br><br>
+                <b>2. Binary Numbers:</b><br><br>
                 Binary numbers are constructed by arranging bits in a sequence, similar to how decimal numbers are formed by arranging 
                 digits (0-9). In binary, numbers are read from right to left, with the rightmost digit representing the smallest value. 
                 <br><br>
                 Here's a simple binary number:
-                <br><br><br>
-                Example 1: Binary number 10110 <br><br>
+                <br><br>
+                <b>Example: Binary number 10110<sub>2</sub></b><br><br>
                 
                 In this example, the rightmost digit (0) represents 2^0 (which equals 1 in decimal), the next digit to the left (1) 
                 represents 2^1 (which is 2 in decimal), the next 1 represents 2^2 (4 in decimal), and so on. You add these values 
-                together to get the decimal equivalent of the binary number.</p>
+                together to get the decimal equivalent of the binary number. <br><br><br><br>
+            
+                <b>3. Binary<sub>2</sub> to Decimal<sub>10</sub> Conversion:</b><br><br>
+                To convert a binary number to decimal, you add up the decimal values of each bit, as explained in the previous example. 
+                Let's convert the binary number 10110 to decimal:
+                
+                &emsp; Decimal equivalent = (1 * 2^4) + (0 * 2^3) + (1 * 2^2) + (1 * 2^1) + (0 * 2^0)
+                &emsp; Decimal equivalent = 16 + 0 + 4 + 2 + 0
+                &emsp; Decimal equivalent = 22
+                <br><br>
+                So, the binary number 10110 is equal to the decimal number 22.
+                <br><br><br>
+                <b>4. Decimal<sub>10</sub> to Binary<sub>2</sub> Conversion:</b><br><br>
+                Converting from decimal to binary is the reverse process. You repeatedly divide the decimal number by 2 and keep 
+                track of the remainders to build the binary representation. <br><br>
+                
+                Let's convert the decimal number 22 to binary:
+                <br><br>
+                &emsp; 22 divided by 2 is 11 with a remainder of 0, so we write down a 0. <br>
+                &emsp; 11 divided by 2 is 5 with a remainder of 1, so we write down a 1. <br>
+                &emsp; 5 divided by 2 is 2 with a remainder of 1, so we write down another 1. <br>
+                &emsp; 2 divided by 2 is 1 with a remainder of 0, so we write down a 0. <br>
+                &emsp; 1 divided by 2 is 0 with a remainder of 1, so we write down the final 1. <br><br>
+                Reading these remainders from bottom to top gives us the binary representation: <br><br>
+                
+                <b>22<sub>10</sub> = 10110<sub>2</sub></b><br><br>
+                There are many other ways to convert decimal to binary and binary to decimal, these are just the simplest and easiest
+                to understand.
+            </p>
         </div>
     </body>
 </html>

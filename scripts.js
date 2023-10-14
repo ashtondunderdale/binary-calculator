@@ -77,10 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function addBinaryNumbers(binary1, binary2) {
-        var int1 = parseInt(binary1, 2);
-        var int2 = parseInt(binary2, 2);
-        var sum = int1 + int2;
-        return sum.toString(2);
+        var float1 = parseInt(binary1, 2);
+        var float2 = parseInt(binary2, 2);
+        var result = (float1 + float2).toString(2);
+        return result; // 1.1 + 1 = 2.1 -> binary
     }
 
     function subtractBinaryNumbers(binary1, binary2) {
