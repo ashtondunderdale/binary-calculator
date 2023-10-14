@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkbox.addEventListener("change", function () {
         biLabel.style.display = checkbox.checked ? "inline" : "none";
         deLabel.style.display = checkbox.checked ? "inline" : "none";
+        isDarkMode = checkbox.checked;
     });
 
     var isDarkMode = false;
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleDarkMode() {
         isDarkMode = !isDarkMode;
         updateDarkModeButtonText();
-        updateDarkModePreference(); 
+        updateDarkModePreference();
     }
 
     darkModeButton.addEventListener("click", toggleDarkMode);

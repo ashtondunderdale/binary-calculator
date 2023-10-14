@@ -3,15 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="binaryKeyLogo.jpg">
+    <link rel="icon" type="image/x-icon" href="media/binaryKeyLogo.jpg">
     <link rel="stylesheet" href="userGuideStyles.css">
     <script src="indexScripts.js"></script>
     <title>User Guide</title>
 </head>
-<body>
-    <a href="index.html" class="homeButton">Home</a>
-    <div class="mainDiv">
-        <p></p>
-    </div>
-</body>
+    <body>
+        <a href="index.html" class="homeButton">Home</a>
+        <div class="mainDiv">
+            <h1 class="userGuideTitle">Binary Calculator Tool</h1> <hr>
+            <p class="userGuideTxt">A tool for calculating binary sums and converting between base<sub>2</sub> and base<sub>10.</sub>
+                <br> <br> Functionality: 
+                <ol class="userGuideTxt">
+                    <li>Addition</li>
+                    <li>Subtraction</li>
+                    <li>Multiplication</li>
+                    <li>Division</li> <br>
+                    <li>Decimal -> Binary</li>
+                    <li>Binary -> Decimal</li>
+                  </ol>         
+            </p> <br>
+            <img class="binaryCalcSs" src="/media/binaryCalcSs.png" alt="">
+            <p class="userGuideTxt">Input box 1 and input box 2 are used in conjunction with each other for performing the four basic 
+                operations. Aside from that the two input boxes are used independantly from each other when the "converion"  
+                checkbox is ticked. This will alter the box functions to incorporate conversion depending on what box is populated.
+                If input box 1 contains a number (must be binary) it will output the decimal conversion of that number, and if
+                input box 2 contains a number (must be decimal) it will output the binary conversion of that number. <br><br><br>
+                Example 1:
+                <img class="binaryCalcSsAddition" src="/media/binaryCalcSsAddition.png" alt="">
+            </p>
+        </div>
+    </body>
 </html>

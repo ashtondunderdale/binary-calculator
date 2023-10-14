@@ -27,7 +27,7 @@ html, body {
 .mainDiv {
     padding: 20px;
     width: 700px;
-    height: 95vh;
+    height: 1200px;
     align-items: center;
     background-color: var(--bg-mainDiv-background-white);
 }
@@ -80,4 +80,25 @@ html, body {
     background-color: rgb(117, 117, 117);
     transition: none;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.userGuideTxt{
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.userGuideTitle{
+    font-family: monospace;
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+.binaryCalcSs{
+    border: solid 1px black;
+    height: 240px;
+}
+
+.binaryCalcSsAddition{
+    border: solid 1px black;
+    height: 240px;
 }

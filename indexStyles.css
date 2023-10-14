@@ -339,3 +339,12 @@ body {
     transition: none;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
+
+.psstTxt {
+    font-family: monospace;
+    position: absolute;
+    top: 807px;
+    left: 140px;
+    font-size: 12px;
+    text-decoration: none;
+}
