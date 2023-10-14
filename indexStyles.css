@@ -342,9 +342,38 @@ body {
 
 .psstTxt {
     font-family: monospace;
-    position: absolute;
-    top: 807px;
-    left: 140px;
+    position: fixed;
+    bottom: 0px;
+    left: 130px; 
     font-size: 12px;
     text-decoration: none;
+}
+
+.checkbox:hover + .tooltip {
+    display:block;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-calcDiv-background-white);
+    color: var(--bg-color-dark);
+    padding: 5px;
+    top: 10px;
+    left: 410px;
+    width: 220px;
+    font-family: monospace;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.checkbox:checked + .tooltip,
+.checkbox-label:hover + .tooltip {
+    display: block;
+    opacity: 1;
+}
+
+.dark-mode .tooltip{
+    background-color: var(--bg-calcDiv-background-dark);
+    color: var(--bg-calcDiv-color-white);
 }

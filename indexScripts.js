@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Check for the dark mode preference in local storage and apply it
     var savedDarkModePreference = localStorage.getItem("dark-mode-preference");
     if (savedDarkModePreference === "dark") {
         isDarkMode = true;
@@ -69,7 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 result = subtractBinaryNumbers(num1, num2);
             } else if (operation === "Multiplication") {
                 result = multiplyBinaryNumbers(num1, num2);
-            } else {
+            } else if (operation === "Division") {
+                result = divideBinaryNumbers(num1, num2);   
+            }  else {
                 result = "Select an operation";
             }
 
@@ -95,6 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
         var int1 = parseInt(binary1, 2);
         var int2 = parseInt(binary2, 2);
         var product = int1 * int2;
+        return product.toString(2);
+    }
+
+    function divideBinaryNumbers(binary1, binary2) {
+        var int1 = parseInt(binary1, 2);
+        var int2 = parseInt(binary2, 2);
+        var product = int1 / int2;
         return product.toString(2);
     }
 
