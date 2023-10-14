@@ -364,7 +364,8 @@ body {
     width: 220px;
     font-family: monospace;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+
 }
 
 .checkbox:checked + .tooltip,
