@@ -1,18 +1,39 @@
+:root {
+    --bg-color-light: rgb(249, 246, 246);
+    --bg-color-dark: rgb(50, 50, 50);
+
+    --bg-mainDiv-background-dark: rgb(109, 109, 109);
+    --bg-mainDiv-background-white: rgb(235, 235, 235);
+
+    --text-color-light: black;
+    --text-color-dark: white;
+}
+
+.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #f0f0f0; 
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .mainDiv {
-    border: 1px solid black;
     padding: 20px;
     width: 700px;
     height: 95vh;
     align-items: center;
+    background-color: var(--bg-mainDiv-background-white);
+}
+
+.dark-mode .mainDiv {
+    background-color: var(--bg-mainDiv-background-dark);
 }
 
 .homeButton {
@@ -20,19 +41,17 @@ html, body {
     top: 10px;
     left: 10px;
     font-size: 12px;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(230, 230, 230);
     color: black;
-    border: none;
     font-family: monospace;
     width: 100px;
     height: 24px;
     transition: transform 0.3s, color 0.3s, background-color 0.3s;
-    text-decoration: none; 
+    text-decoration: none;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
 }
-
 
 .homeButton:hover {
     background-color: rgb(150, 150, 150);
@@ -44,11 +63,10 @@ html, body {
     background-color: rgb(117, 117, 117);
     transition: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 
 .dark-mode .homeButton {
-    background-color: var(--bg-calcDiv-background-dark); 
+    background-color: var(--bg-mainDiv-background-dark); 
     color: white;
 }
 
