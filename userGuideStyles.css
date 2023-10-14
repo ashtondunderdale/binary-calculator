@@ -98,7 +98,24 @@ html, body {
     height: 240px;
 }
 
+.dark-mode .binaryCalcSs{
+    border-color: white;
+}
+
 .binaryCalcSsAddition{
     border: solid 1px black;
-    height: 240px;
+    height: 180px;
+}
+
+.dark-mode .binaryCalcSsAddition{
+    border-color: white;
+}
+
+.binaryToDecimalSs{
+    border: solid 1px black;
+    height: 180px;
+}
+
+.dark-mode .binaryToDecimalSs{
+    border-color: white;
 }
