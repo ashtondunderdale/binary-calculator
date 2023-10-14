@@ -290,3 +290,52 @@ body {
     left: 150px;
     display: none;
 }
+
+.userGuideButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    background-color: rgb(235, 235, 235);
+    color: black;
+    border: none;
+    font-family: monospace;
+    width: 100px;
+    height: 24px;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+    text-decoration: none; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.userGuideButton:hover {
+    background-color: rgb(150, 150, 150);
+    color: white;
+    transform: scale(1.05);
+}
+
+.userGuideButton:active {
+    background-color: rgb(117, 117, 117);
+    transition: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.dark-mode .userGuideButton {
+    background-color: var(--bg-calcDiv-background-dark); 
+    color: white;
+}
+
+.dark-mode .userGuideButton:hover {
+    background-color: rgb(150, 150, 150);
+    color: white;
+    transform: scale(1.05);
+}
+
+.dark-mode .userGuideButton:active {
+    background-color: rgb(117, 117, 117);
+    transition: none;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
