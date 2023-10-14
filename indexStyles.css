@@ -275,20 +275,23 @@ body {
     font-family: monospace;
 }
 
-.biLbl{
+.biLbl {
     position: absolute;
     font-family: monospace;
     top: 2px;
     left: 150px;
-    display: none;
 }
 
-.DeLbl{
+.DeLbl {
     position: absolute;
     font-family: monospace;
     top: 42px;
     left: 150px;
-    display: none;
+}
+
+#myCheckbox:checked + .labels-container #biLbl,
+#myCheckbox:checked + .labels-container #DeLbl {
+    display: block;
 }
 
 .userGuideButton {
@@ -364,7 +367,7 @@ body {
     width: 220px;
     font-family: monospace;
     opacity: 0;
-    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+    transition: opacity 0.3s;
 
 }
 

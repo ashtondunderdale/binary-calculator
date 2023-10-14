@@ -13,17 +13,20 @@
         <div class="binCalTxtDiv">
             <p class="binCalTxt"> <b>Binary<sub>2</sub> Calculator</b></p>        
         </div>
+        
         <div class="calcDiv">
             <form>
                 <label class="checkBoxLbl" for="myCheckbox">Converison? -></label>
                 <input class="checkbox" type="checkbox" id="myCheckbox" name="myCheckbox" value="checked">
                 <div class="tooltip">Want to know how this is done? Click -> Here</div>
             </form>
+            <div class="labels-container">
+                <p class="biLbl" for="myCheckbox">Bi<sub>2</sub>&emsp; -> &emsp;De<sub>10</sub></p>
+                <p class="DeLbl" for="myCheckbox">De<sub>10</sub> -> &emsp;Bi<sub>2</sub></p>
+            </div>
+
             <input class="numberOne" type="text" id="binOne" placeholder="" maxlength="8">
-            <p class="biLbl" >Bi<sub>2</sub>&emsp; -> &emsp;De<sub>10</sub></p>
             <input class="numberTwo" type="text" id="binTwo" placeholder="" maxlength="8">
-            <p class="DeLbl">De<sub>10</sub> -> &emsp;Bi<sub>2</sub></p>
-            
             <input class="outputBox" type="text" id="binResult" placeholder="" readonly>
 
             <div class="customSelect">
@@ -35,6 +38,7 @@
                 </select>
             </div>
         </div>
+
         <button class="resultButton" id="calculateButton">Result</button>
         <button class="resetButton" id="resetButton">Reset</button>
     </div>

@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     var checkbox = document.getElementById("myCheckbox");
-    var biLabel = document.querySelector(".biLbl");
-    var deLabel = document.querySelector(".DeLbl");
     var darkModeButton = document.getElementById("darkModeButton");
 
     function updateDarkModePreference() {
