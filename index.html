@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="indexStyles.css">
     <link rel="icon" type="image/x-icon" href="media/binaryKeyLogo.jpg">
-    <script src="IndexScripts.js"></script>
+    <script src="scripts.js"></script>
     <title>Binary Calculator</title>
 </head>
 <body>
@@ -18,13 +18,13 @@
             <form>
                 <label class="checkBoxLbl" for="myCheckbox">Converison? -></label>
                 <input class="checkbox" type="checkbox" id="myCheckbox" name="myCheckbox" value="checked">
-                <div class="tooltip">Want to know how this is done? Click -> Here</div>
+                <div class="tooltip">Want to know how this is done? Click -> <b> <a style="text-decoration: none; color: grey;" href="info.html">Here</a></b></div>
             </form>
             <div class="labels-container">
                 <p class="biLbl" for="myCheckbox">Bi<sub>2</sub>&emsp; -> &emsp;De<sub>10</sub></p>
                 <p class="DeLbl" for="myCheckbox">De<sub>10</sub> -> &emsp;Bi<sub>2</sub></p>
             </div>
-
+            
             <input class="numberOne" type="text" id="binOne" placeholder="" maxlength="8">
             <input class="numberTwo" type="text" id="binTwo" placeholder="" maxlength="8">
             <input class="outputBox" type="text" id="binResult" placeholder="" readonly>
@@ -45,5 +45,6 @@
     <button class="darkModeButton" id="darkModeButton">Change Mode</button>
     <a href="userGuide.html" class="userGuideButton" id="userGuideButton">User Guide</a>
     <p class="psstTxt">(Psst, like the tool? Click -> <b><a style="text-decoration: none; color: grey;"  href="https://github.com/ashtondunderdale/binaryCalculator.github.io">Here ⭐</a></b>)</p>
+    <a href="info.html" class="infoButton" id="infoButton">Info</a>
 </body>
 </html>
