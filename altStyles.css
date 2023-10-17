@@ -119,3 +119,11 @@ html, body {
 .dark-mode .binaryToDecimalSs{
     border-color: white;
 }
+
+.blogDate{
+    font-family: monospace;
+}
+
+.blogText{
+    font-family: monospace;
+}

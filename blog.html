@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="media/binaryKeyLogo.jpg">
+    <link rel="stylesheet" href="altStyles.css">
+    <script src="scripts.js"></script>
+    <title>Blog Page</title>
+</head>
+    <body>
+        <a href="index.html" class="homeButton">Home</a>
+        <div class="mainDiv">
+            <h1 class="userGuideTitle">Blog</h1> <hr>
+            <h2 class="blogDate">17/10/2023</h2>
+            <p class="blogText">Binary is a base 2 number system, which means that it can only be represented by 2 characters: 1, and 0.
+                Because of this, to understand what a binary number is, we have to convert it into denary, base 10. To do this, we take a
+                given binary number: <b>11011101</b> <br><br>We can work this out by doing: <br><br> 128 + 64 = 192 <br> 16 + 8 = 24 <br> 
+                4 + 1 = 5 <br> 192 + 24 = 216 + 5 = 221 <br> <br> <b>11011101</b> = 221 <br><br> However, that takes a very long time, and 
+                requires a piece of paper (unless your very good at mental maths). <br><br>Because of this, I have come up with a method that
+                allows you to look at a binary number, any length, 1 or even 8 digits, and immediately know what it is in base 10. The method 
+                involves memorising just 15 binary combinations then you will know all of them, and if you already know a little about binary,
+                you will know that binary numbers with 8 digits have 255 different combinations: 00000000 - 11111111. <br><br> To perform this
+                method you will need to take a given binary number: <b>11001011</b>. Now lets do step 1: <br><br><br><b>1. Split</b> <br><br>
+                Firstly, split the number into 2 separate lengths: <b>1100 | 1011</b>. We will call these the upper bound, and the lower bound.
+                The upper bound will always be on the left and the lower on the right. <br><br><b>2. Recall</b> <br><br>For the upper bound
+                there are 15 different combinations (0001, 0010, 0011, etc.) each of these have a uppere bound number assigned to them, recall 
+                which one it is for this case: it is 192, since 128 + 64 = 192. <br><br><b>3. Sum</b><br><br>Now you have the hard part done, 
+                you can just work out in your head the lower bound. We know that the digit furthest right is 1, next to that is 2, and then 4, 
+                however 4 is a 0 so we skip it, and then 8. 1 + 2 + 8 = 11. <br><br>192 + 11 = 203 <br><br>Here are the combinations you need to 
+                remember: <br><br>0001 = 16 <br>0010 = 32 <br>0011 = 48 <br>0100 = 64 <br> 0101 = 80 <br>0110 = 96 <br> 0111 = 112 <br>1000 = 128 
+                <br> 1001 = 144 <br> 1010 = 160 <br> 1011 = 176 <br> 1100 = 192 <br> 1101 = 208 <br> 1110 = 224 <br> 1111 = 240 <br><br> Once you
+                have memorised those, you are good to go. <br> <hr>
+                </p>
+        </div>
+    </body>
+</html>
