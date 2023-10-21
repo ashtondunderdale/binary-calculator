@@ -11,4 +11,4 @@ Can perform the following:
 * Decimal -> Binary Conversion
 * Binary -> Decimal Conversion
 
-Includes user guide, informative page on binary, calculator
+Includes user guide, informative page on binary, blog, calculator
